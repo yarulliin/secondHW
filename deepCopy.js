@@ -8,22 +8,11 @@ function deepCopy(obj) {
     }
 
     for (let i in obj) {
-        newObj[i] = deepCopy(obj[i]);
+        if (Array.isArray(obj[i])) {
+            newObj[i] = obj[i]
+        }
+        else newObj[i] = deepCopy(obj[i]);
     }
 
     return newObj;
 }
-
-let obj = {
-    name: 'Rifat',
-    passport: {
-        series: 123
-    }
-}
-
-let copyObj = deepCopy(obj);
-
-console.log(obj);
-console.log(copyObj);
-console.log(obj == obj); // true
-console.log(obj == copyObj); // false

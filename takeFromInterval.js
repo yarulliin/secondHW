@@ -18,9 +18,3 @@ function takeFromInterval(arr, start, end) {
 
     return newArr;
 }
-
-console.log(takeFromInterval([1, 2, 3], 3, 1)); // [1, 2, 3]
-console.log(takeFromInterval([1, 2, 3], 1, 2)); // [1, 2]
-console.log(takeFromInterval([], 2, 1)); // []
-console.log(takeFromInterval([1, 2, 3], 'a', 3)); // []
-console.log(takeFromInterval([1, 2, 3], 1, 4)); // []

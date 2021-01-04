@@ -1,10 +1,5 @@
 // Задание 3
 
-let myIterable = {
-    from: 1,
-    to: 4,
-}
-
 myIterable[Symbol.iterator] = function() {
     let start, end;
     if (this.from && this.to) {
@@ -40,8 +35,4 @@ myIterable[Symbol.iterator] = function() {
             }
         }
     }
-}
-
-for (let el of myIterable) {
-    console.log(el);
 }
